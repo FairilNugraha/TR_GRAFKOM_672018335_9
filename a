@@ -6,7 +6,7 @@
 
 void init(void); void ukuran(int,int);
 void display(void); void hilang(void);
-void detail(void); void lapangan(void); void tribunkanan(void); void tribunkiri(void); void tribundepan(void); void tribunbelakang(void);
+void detail(void); void tribunkanan(void); void tribunkiri(void); void tribundepan(void); void tribunbelakang(void);
 void cangkangatas(void); void cangkang1(void);void cangkang2(void);void cangkang3(void);void cangkang4(void);void cangkang5(void);
 void keyboard(unsigned char, int x, int y);
 void mouse(int button, int state, int x, int y);
@@ -2195,153 +2195,6 @@ void detail(void)
     glVertex3f(56.7,28,0);
     glEnd();
 }
-void lapangan(void)
-{
-    glBegin(GL_POLYGON);//lapangan
-    glColor3ub(0, 189, 9);
-    glVertex3f(-22.5,-10.0,-35.0);
-    glVertex3f(-22.5,-10.0,35.0);
-    glVertex3f(22.5,-10.0,35.0);
-    glVertex3f(22.5,-10.0,-35.0);
-    glEnd();
-    glBegin(GL_POLYGON);//batas kiri dalam
-    glColor3ub(106, 115, 106);
-    glVertex3f(-22.51,-7.0,-31.0);
-    glVertex3f(-22.51,-7.0,35.01);
-    glVertex3f(-22.51,-10.0,35.01);
-    glVertex3f(-22.51,-10.0,-31.0);
-    glEnd();
-    glBegin(GL_POLYGON);//batas blkg dalam
-    glColor3ub(106, 115, 106);
-    glVertex3f(-18.5,-7.0,-35.01);
-    glVertex3f(22.51,-7.0,-35.01);
-    glVertex3f(22.51,-10.0,-35.01);
-    glVertex3f(-18.5,-10.0,-35.01);
-    glEnd();
-    glBegin(GL_POLYGON);//batas kanan dalam
-    glColor3ub(106, 115, 106);
-    glVertex3f(22.51,-7.0,-35.01);glVertex3f(22.51,-7.0,31.0);
-    glVertex3f(22.51,-10.0,31.0);glVertex3f(22.51,-10.0,-35.01);
-    glEnd();
-    glBegin(GL_POLYGON);//batas depan dalam
-    glColor3ub(106, 115, 106);
-    glVertex3f(-22.51,-7.0,35.01);glVertex3f(18.5,-7.0,35.01);
-    glVertex3f(18.5,-10.0,35.01);glVertex3f(-22.51,-10.0,35.01);
-    glEnd();
-    glBegin(GL_POLYGON);//batas kiri luar
-    glColor3ub(106, 115, 106);
-    glVertex3f(-23.51,-7.0,-32.0);glVertex3f(-23.51,-7.0,36.01);
-    glVertex3f(-23.51,-10.0,36.01);glVertex3f(-23.51,-10.0,-32.0);
-    glEnd();
-    glBegin(GL_POLYGON);//batas blkg luar
-    glColor3ub(106, 115, 106);
-    glVertex3f(-19.5,-7.0,-36.01);glVertex3f(23.51,-7.0,-36.01);
-    glVertex3f(23.51,-10.0,-36.01);glVertex3f(-19.5,-10.0,-36.01);
-    glEnd();
-    glBegin(GL_POLYGON);//batas kanan luar
-    glColor3ub(106, 115, 106);
-    glVertex3f(23.51,-7.0,-36.01);glVertex3f(23.51,-7.0,32.0);
-    glVertex3f(23.51,-10.0,32.0);glVertex3f(23.51,-10.0,-36.01);
-    glEnd();
-    glBegin(GL_POLYGON);//batas depan luar
-    glColor3ub(106, 115, 106);
-    glVertex3f(-23.51,-7.0,36.01);glVertex3f(19.5,-7.0,36.01);
-    glVertex3f(19.5,-10.0,36.01);glVertex3f(-23.51,-10.0,36.01);
-    glEnd();
-    glBegin(GL_POLYGON);//batas kiri atas
-    glColor3ub(106, 115, 106);
-    glVertex3f(-23.51,-7.0,-32.0);glVertex3f(-22.51,-7.0,-31.0);
-    glVertex3f(-22.51,-7.0,35.01);glVertex3f(-23.51,-7.0,36.01);
-    glEnd();
-    glBegin(GL_POLYGON);//batas blkg atas
-    glColor3ub(106, 115, 106);
-    glVertex3f(-18.5,-7.0,-35.01);glVertex3f(22.51,-7.0,-35.01);
-    glVertex3f(23.51,-7.0,-36.01);glVertex3f(-19.5,-7.0,-36.01);
-    glEnd();
-    glBegin(GL_POLYGON);//batas kanan atas
-    glColor3ub(106, 115, 106);
-    glVertex3f(22.51,-7.0,-35.01);glVertex3f(22.51,-7.0,31.0);
-    glVertex3f(23.51,-7.0,32.0);glVertex3f(23.51,-7.0,-36.01);
-    glEnd();
-    glBegin(GL_POLYGON);//batas depan atas
-    glColor3ub(106, 115, 106);
-    glVertex3f(-22.51,-7.0,35.01);glVertex3f(18.5,-7.0,35.01);
-    glVertex3f(19.5,-7.0,36.01);glVertex3f(-23.51,-7.0,36.01);
-    glEnd();
-    glBegin(GL_POLYGON);//kiri pintu masuk
-    glColor3ub(106, 115, 106);
-    glVertex3f(-22.51,-10,-31);glVertex3f(-37,3,-43.5);
-    glVertex3f(-37,-10,-43.5);
-    glEnd();
-    glBegin(GL_POLYGON);//kanan pintu masuk
-    glColor3ub(106, 115, 106);
-    glVertex3f(-18.5,-10,-35);glVertex3f(-30,1,-47.5);
-    glVertex3f(-30,-10,-47.5);
-    glEnd();
-    glBegin(GL_POLYGON);//bawah pintu masuk
-    glColor3ub(99, 99, 99);
-    glVertex3f(-18.5,-10,-35);glVertex3f(-30,-10,-47.5);
-    glVertex3f(-37,-10.01,-43.5);glVertex3f(-22.51,-10.01,-31);
-    glEnd();
-    glBegin(GL_POLYGON);//daleman pintu masuk
-    glColor3ub(69, 69, 69);
-    glVertex3f(-30,0.4,-47.5);glVertex3f(-37,0.4,-43.5);
-    glVertex3f(-37,-10,-43.5);glVertex3f(-30,-10,-47.5);
-    glEnd();
-    glBegin(GL_POLYGON);//kiri pintu masuk
-    glColor3ub(106, 115, 106);
-    glVertex3f(22.51,-10,31);glVertex3f(37,3,43.5);
-    glVertex3f(37,-10,43.5);
-    glEnd();
-    glBegin(GL_POLYGON);//kanan pintu masuk
-    glColor3ub(106, 115, 106);
-    glVertex3f(18.5,-10,35);glVertex3f(30,1,47.5);
-    glVertex3f(30,-10,47.5);
-    glEnd();
-    glBegin(GL_POLYGON);//bawah pintu masuk
-    glColor3ub(99, 99, 99);
-    glVertex3f(18.5,-10,35);glVertex3f(30,-10,47.5);
-    glVertex3f(37,-10.01,43.5);glVertex3f(22.51,-10.01,31);
-    glEnd();
-    glBegin(GL_POLYGON);//daleman pintu masuk
-    glColor3ub(69, 69, 69);
-    glVertex3f(30,0.4,47.5);glVertex3f(37,0.4,43.5);
-    glVertex3f(37,-10,43.5);glVertex3f(30,-10,47.5);
-    glEnd();
-
-    glBegin(GL_POLYGON); //dinding kanan
-    glColor3ub(199, 199, 199);
-    glVertex3f(51.7,-10,64);
-    glVertex3f(56.7,28,69);
-    glVertex3f(56.7,28,-69);
-    glVertex3f(51.7,-10,-64);
-    glEnd();
-
-    glBegin(GL_POLYGON); //dinding kiri
-    glColor3ub(199, 199, 199);
-    glVertex3f(-51.7,-10,64);
-    glVertex3f(-56.7,28,69);
-    glVertex3f(-56.7,28,-69);
-    glVertex3f(-51.7,-10,-64);
-    glEnd();
-
-    glBegin(GL_POLYGON); //dinding belakang
-    glColor3ub(199, 199, 199);
-    glVertex3f(-51.7,-10,-64.1);
-    glVertex3f(-56.7,28,-69.1);
-    glVertex3f(56.7,28,-69.1);
-    glVertex3f(51.7,-10,-64.1);
-    glEnd();
-
-    glBegin(GL_POLYGON); //dinding depan
-    glColor3ub(199, 199, 199);
-    glVertex3f(-51.7,-10,64.1);
-    glVertex3f(-56.7,28,69.1);
-    glVertex3f(56.7,28,69.1);
-    glVertex3f(51.7,-10,64.1);
-    glEnd();
-
-}
 void tribunbelakang(void)
 {
 double ymax = 7.0;double y2max = 28.0;
@@ -2821,7 +2674,6 @@ void hilang(void)
     cangkang3();
     cangkang4();
     cangkang5();
-    lapangan();
     tribunbelakang();
     tribunkanan();
     tribunkiri();
@@ -2840,7 +2692,6 @@ void tampil(void)
     cangkang3();
     cangkang4();
     cangkang5();
-    lapangan();
     tribunbelakang();
     tribunkanan();
     tribunkiri();
